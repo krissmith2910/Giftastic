@@ -1,0 +1,42 @@
+body {
+    font-family:'Righteous', cursive;
+    background-color: gray;
+}
+
+.topic {
+    margin: 10px;
+   }
+
+.buttons-view {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+h2 {
+    letter-spacing: 5px;
+    text-align: center;
+    color:red;
+}
+
+h6 {
+    font-style: italic;
+    color: black(240, 255, 244);
+}
+
+.topic {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.hero-name{
+    margin: 20px;
+    float: left;
+}
+
+p {
+    color:black;
+    margin-top: 20px;
+    line-height: 16px;
+}
+

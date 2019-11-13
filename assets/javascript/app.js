@@ -1,13 +1,13 @@
 $(document).ready(function() {
     
-    var topics = ['Superman', 'Aquaman', 'Spiderman', 'Batman', 'Wonder Woman', 'Thor', 'Hulk', 'Black Panther', 'Iron Man'];
+    var topics = ['Los Angeles Lakers', 'Los Angeles Angels', 'Philadelphia Eagles', 'Real Salt Lake'];
 
     /// ALL FUNCTIONS
  
     function displayInfo(){
-      $('#hero-view').empty();
+      $('#sportsTeam-view').empty();
       var topic = $(this).attr('data-name');
-      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + topic + '&api_key=jVz8LzEOLKTNPSj1tux4I40dP1PX6Pbg&limit=10';
+      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + topic + '&api_key=BCts3htyu2txRv0QWeGJFBkAY6SArjoF';
 
       
       $.ajax({
@@ -30,7 +30,7 @@ $(document).ready(function() {
         var results = response.data;
         for (var j = 0; j < results.length; j++){
           
-          var newTopicDiv = $("<div class='hero-name'>");
+          var newTopicDiv = $("<div class='sportsTeam-name'>");
          
           var pRating = $('<p>').text('Rating: ' + results[j].rating.toUpperCase());
          
@@ -49,14 +49,13 @@ $(document).ready(function() {
           newTopicDiv.append(pTitle);
           newTopicDiv.append(gif);
            
-          $('#hero-view').prepend(newTopicDiv);
+          $('#sportsTeam-view').prepend(newTopicDiv);
         } 
       });
     };
     
    
     function renderButtons() {
-      // Deletes the movies prior to adding new movies
       $('.buttons-view').empty();
       // Loops through the array of topics to create buttons for all topics
       for (var i = 0; i < topics.length; i++) {
@@ -70,7 +69,7 @@ $(document).ready(function() {
 
     // Function to remove buttons
     function removeButton(){
-      $("#hero-view").empty();
+      $("#sportsTeam-view").empty();
       var topic = $(this).attr('data-name');
       var itemindex = topics.indexOf(topic);
       if (itemindex > -1) {
@@ -93,10 +92,10 @@ $(document).ready(function() {
     }
 
     
-    $("#add-hero").on("click", function(event) {
+    $("#add-sportsTeam").on("click", function(event) {
       event.preventDefault();
       
-      var hero = $("#hero-input").val().trim();
+      var hero = $("#sportsTeam-input").val().trim();
       
       if (topics.toString().toLowerCase().indexOf(hero.toLowerCase()) != -1) {
         alert("Topic already exists");

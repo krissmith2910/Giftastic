@@ -1,6 +1,6 @@
 body {
     font-family:'Righteous', cursive;
-    background-color: gray;
+    background-color:gold;
 }
 
 .topic {
@@ -9,14 +9,14 @@ body {
 
 .buttons-view {
     border-radius: 25px;
-    border: 2px solid black;
+    border: 2px solid purple;
     padding: 10px;
 }
 
 h2 {
     letter-spacing: 5px;
     text-align: center;
-    color:red;
+    color:purple;
 }
 
 h6 {
@@ -29,13 +29,13 @@ h6 {
     font-weight: lighter;
 }
 
-.hero-name{
+.sportsTeam-name{
     margin: 20px;
     float: left;
 }
 
 p {
-    color:black;
+    color:purple;
     margin-top: 20px;
     line-height: 16px;
 }
